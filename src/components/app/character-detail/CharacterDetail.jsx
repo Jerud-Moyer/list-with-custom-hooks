@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useCharacterById } from '../../../hooks/characters';
+import Header from '../../header/Header';
 
 
 const CharacterDetail = () => {
@@ -11,6 +12,7 @@ const CharacterDetail = () => {
 
   return (
     <>
+      <Header />
       <h1>{character.name}</h1>
       <h2>affiliation: {character.affiliation}</h2>
       <img src={character.imageUrl} alt={character.name} />
