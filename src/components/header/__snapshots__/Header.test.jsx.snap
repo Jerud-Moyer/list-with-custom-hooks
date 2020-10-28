@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders Header 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      BenderDex
+    </h1>
+    <a
+      href="/"
+    >
+      Home
+    </a>
+  </div>
+</DocumentFragment>
+`;
