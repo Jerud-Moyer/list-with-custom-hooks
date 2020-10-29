@@ -3,6 +3,14 @@
 exports[`App component renders App 1`] = `
 <DocumentFragment>
   <div>
+    <button
+      disabled=""
+    >
+      &lt;
+    </button>
+    <button>
+      &gt;
+    </button>
     <h1>
       Loading.1.2.3
     </h1>
