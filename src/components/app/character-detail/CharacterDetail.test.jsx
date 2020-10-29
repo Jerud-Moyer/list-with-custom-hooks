@@ -14,15 +14,15 @@ describe('CharacterDetail component', () => {
       affiliation: 'water',
       imageUrl: 'image.jpg'
     });
-    render(<MemoryRouter initialEntries={['/character/1']}>
-      <Route path="/character:id" component={CharacterDetail}/>
+    render(<MemoryRouter initialEntries={['/characters/1']}>
+      <Route path="/characters/:id" component={CharacterDetail}/>
     </MemoryRouter>);
 
     screen.getByText('Loading.1.2.3');
 
     return waitFor(() => {
       screen.getByText('Aayoo');
-      screen.getByText('water');
+      screen.getByText('affiliation: water');
       screen.getByAltText('Aayoo');
     });
   });

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useCharacters } from '../../../hooks/characters';
 import CharacterItem from './CharacterItem';
+import Header from '../../header/Header';
 import { Link } from 'react-router-dom';
 
 const CharacterList = ({ page }) => {
@@ -10,16 +11,19 @@ const CharacterList = ({ page }) => {
 
   const characterElements = characters.map(character => (
     <li key={character.id}>
-      <Link to={`./characters/${character.id}`}>
+      <Link to={`./characters/${character.id}`} >
         <CharacterItem {...character} />
       </Link>
     </li>
   ));
 
   return (
-    <ul data-testid="characters">
-      {characterElements}
-    </ul>
+    <>
+      <Header />
+      <ul data-testid="characters">
+        {characterElements}
+      </ul>
+    </>
   );
 };
 

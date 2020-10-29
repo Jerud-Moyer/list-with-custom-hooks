@@ -7,7 +7,7 @@ export const getCharacters = async(page = 1) => {
   if(!res.ok) throw 'OOPS! Unable to fetch';
   
   return json.map(character => ({
-    id: character.id,
+    id: character._id,
     name: character.name,
     imageUrl: character.photoUrl
   }));
